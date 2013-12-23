@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutChargeItem"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="11dp"
+    android:background="@drawable/bill_item"
+    android:padding="18dp" >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="6dp"
+        android:text="@string/bill_total"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/bill_item_title" android:gravity="center_vertical"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvTitle"
+        android:background="@color/bill_item_divider" />
+
+    <Button
+        android:id="@+id/btnDown"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_toggle_left_normal"
+        android:hint="@string/hint_symbol_down" android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <Button
+        android:id="@+id/btnUp"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/btnDown"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="75dp"
+        android:background="@drawable/btn_toggle_right_normal"
+        android:hint="@string/hint_symbol_up" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_alignTop="@id/btnDown"/>
+
+    <EditText
+        android:id="@+id/etCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_alignBottom="@id/btnDown"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginRight="-3dp"
+        android:layout_toLeftOf="@id/btnUp"
+        android:layout_toRightOf="@id/btnDown"
+        android:ellipsize="start"
+        android:ems="10"
+        android:gravity="left|center_vertical"
+        android:hint="@string/default_decimal"
+        android:inputType="numberDecimal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/bill_item_price"
+        android:textColorHint="@color/bill_item_edit_text_hint" android:background="@drawable/edit_text" android:layout_alignTop="@id/btnDown" android:layout_marginTop="1dp"/>
+
+</RelativeLayout>

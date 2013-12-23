@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layoutActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:background="@color/action_bar_background" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.3"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:onClick="action_btn_clicked"
+                android:src="@drawable/ic_action_bar_launcher"
+                android:tag="newbill" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical" >
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/action_bar_btn_selector"
+                android:onClick="action_btn_clicked"
+                android:paddingLeft="1dp"
+                android:paddingRight="2dp"
+                android:src="@drawable/ic_clipboard"
+                android:tag="bill" />
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/action_bar_btn_selector"
+                android:onClick="action_btn_clicked"
+                android:src="@drawable/ic_menu"
+                android:tag="charges" />
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/action_bar_btn_pressed"
+                android:onClick="action_btn_clicked"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:src="@drawable/ic_checklist"
+                android:tag="split" />
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/action_bar_btn_selector"
+                android:onClick="action_btn_clicked"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:src="@drawable/ic_action_overflow"
+                android:tag="menu" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:background="@color/action_bar_border_bottom" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/circularProgressLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="top"
+        android:padding="11dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/loading"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/loading" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@id/tvLoading" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvBuyerList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/bill_item_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent"
+        android:visibility="visible" >
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/total_bar" >
+
+        <TextView
+            android:id="@+id/tvGrandTotal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/default_decimal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/total_bar_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvGrandTotal"
+            android:layout_alignTop="@id/tvGrandTotal"
+            android:gravity="left|center_vertical"
+            android:padding="20dp"
+            android:text="@string/grand_total"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/total_bar_label" />
+    </RelativeLayout>
+
+</LinearLayout>

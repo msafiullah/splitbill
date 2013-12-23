@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Split Bill</string>
+    <string name="default_decimal">0.00</string>
+    <string name="default_title">Title</string>
+    <string name="default_number">0</string>
+    <string name="name_hint">NAME</string>
+    <string name="symbol_up">&amp;#9650;</string>
+    <string name="symbol_down">&amp;#9660;</string>
+    <string name="hint_symbol_up">^</string>
+    <string name="hint_symbol_down">v</string>
+    <string name="app_desc">Tired of the hassle and  puzzle when settling bills? Avoid it next time with Split Bill.&lt;br />&lt;br />Calculate the exact amount payable per person or simply divide the bill evenly among any number of people.&lt;br />&lt;br />This financially savvy app helps you save extra bucks. Find out the exact amount you and others need to pay for the bill.&lt;br />&lt;br />Discover discount, tip, tax and service charge amounts. Split bill easily, round up to nearest dollar and settle bill within seconds.</string>
+    <string name="add_buyer_symbol">+</string>
+    <string name="total">Total</string>
+    <string name="bill_total">Bill Total</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="symbol_dollar">$</string>
+    <string name="symbol_percent">%</string>
+    <string name="loading">Loading..</string>
+    <string name="num_of_people">No. People</string>
+    <string name="amount_each">Each Pays</string>
+    <string name="select_buyers">Select Buyers</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+
+    <color name="app_background">#c5ccd4</color>
+    <color name="action_bar_background">#222222</color>
+    <color name="action_bar_border_bottom">#33b5e5</color>
+    <color name="bill_item_background_start">#f8f8f8</color>
+    <color name="bill_item_background_end">#e8edff</color>
+    <color name="bill_item_divider">#c5ccd4</color>
+    <color name="bill_item_border">#919191</color>
+    <color name="bill_item_number">#292829</color>
+    <color name="bill_item_title">#292829</color>
+    <color name="bill_item_edit_text_hint">#c5ccd4</color>
+    <color name="bill_item_price">#eb1313</color>
+    <color name="bill_item_buyer_name">#33b5e5</color>
+    <color name="action_bar_item_pressed_background">#33b5e5</color>
+    <color name="action_bar_item_selected_border">#33b5e5</color>
+    <color name="bill_item_buyer_edit_text_background_start">#eff2fd</color>
+    <color name="bill_item_buyer_edit_text_background_end">#f8f8f8</color>
+    <color name="total_bar_background_start">#89a0be</color>
+    <color name="total_bar_background_center">#476999</color>
+    <color name="total_bar_background_end">#4a6c9b</color>
+    <color name="total_bar_text">#FFFFFF</color>
+    <color name="total_bar_label">#304055</color>
+    <color name="total_bar_border">#576373</color>
+    <color name="charge_type_toggle_selected_background">#33b5e5</color>
+    <color name="charge_type_toggle_background">#a6aca9</color>
+    <color name="buyer_total_item_background">#FFF</color>
+    <color name="about_text">#222</color>
+    <color name="loading">#666</color>
+
+    <dimen name="num_pad_btn_size">32dp</dimen>
+
+</resources>

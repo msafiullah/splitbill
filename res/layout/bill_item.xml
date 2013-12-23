@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutBillItem"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="11dp"
+    android:background="@drawable/bill_item"
+    android:padding="11dp" >
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/ic_cancel" />
+
+    <Button
+        android:id="@+id/btnDuplicate"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_toLeftOf="@id/btnDelete"
+        android:background="@drawable/ic_copy_blue" />
+
+    <TextView
+        android:id="@+id/tvItemNum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/btnDuplicate"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/bill_item_number" />
+
+    <LinearLayout
+        android:id="@+id/layoutBuyerNames"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDelete"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="7dp"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layoutBuyerNames"
+        android:background="@color/bill_item_divider" />
+
+    <EditText
+        android:id="@+id/etItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/layoutBuyerNames"
+        android:layout_marginRight="11dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:ellipsize="start"
+        android:ems="3"
+        android:gravity="right|center_vertical"
+        android:hint="@string/default_decimal"
+        android:inputType="numberDecimal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/bill_item_price"
+        android:textColorHint="@color/bill_item_edit_text_hint" />
+
+    <Button
+        android:id="@+id/btnAddBuyer"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/etItemPrice"
+        android:layout_toLeftOf="@id/etItemPrice"
+        android:background="@drawable/btn_toggle_right_normal"
+        android:text="@string/add_buyer_symbol" />
+
+    <EditText
+        android:id="@+id/etBuyer"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/btnAddBuyer"
+        android:layout_below="@id/layoutBuyerNames"
+        android:layout_marginBottom="-4dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="-3dp"
+        android:layout_toLeftOf="@id/btnAddBuyer"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:inputType="textCapCharacters|textPersonName"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/bill_item_buyer_name"
+        android:textColorHint="@color/bill_item_edit_text_hint" />
+
+</RelativeLayout>
